@@ -1,0 +1,31 @@
+---
+title: "Actividad 5, Rmarkdawn grupo Autores: Melina Gaona, Thiago Guevara"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+# Incluir imagen 
+![](paisaje.jpg)
+porque es visualmente bello
+
+# Chunck con código de R
+
+```{r echo = TRUE, fig.width = 5, fig.height = 5} 
+library(ggplot2)
+ggplot(data=mpg,aes(x=hwy, y=cty))+ geom_point()+theme(aspect.ratio=1)+ labs(x="higheay miles per gallon", y="city miles per gallon", title="grafico de scatterplot hwy vs cty")
+```
+
+# Incluir tabla
+
+```{r,results='asis'}
+library(xtable)
+xtable(mtcars[1:5,1:5])
+```
+
+
+
